@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/Fondo1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.contenedor {
+    width: 50%;
+    margin: 100px auto;
+}
+
+/* Estilos para la lista de cursos */
+.cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.curso {
+    flex: 1 1 300px;
+    padding: 40px;
+    border: 4px solid #ccc;
+    border-radius: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Colores diferentes para cada curso */
+.estudios_sociales, .ciencias_naturales, .lengua_literatura, .matematica, .ingles, .educacion_cultura_artistica {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para las imágenes dentro de los cursos */
+.estudios_sociales { background-image: url('img/Estudios.jpg'); }
+.ciencias_naturales { background-image: url('img/Ciencias.jpg'); }
+.lengua_literatura { background-image: url('img/Lengua.jpg'); }
+.matematica { background-image: url('img/Matema.jpg'); }
+.ingles { background-image: url('img/Ingles.jpg'); }
+.educacion_cultura_artistica { background-image: url('img/Eca.jpg'); }
+
+
+/* Estilos adicionales para centrar la imagen en el cuadro del curso */
+.curso img {
+    max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor del curso */
+    max-height: 100%; /* Asegura que la imagen no supere la altura del contenedor del curso */
+    margin: auto; /* Centra la imagen horizontalmente */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+.estudios_sociales h2 {
+    color: #3498db; /* Azul */
+    background: #ecf0f1; /* Fondo gris claro */
+}
+
+.ciencias_naturales h2 {
+    color: #2ecc71; /* Verde */
+    background: #ecf0f1; /* Fondo gris claro */
+}
+
+.lengua_literatura h2 {
+    color: #e74c3c; /* Rojo */
+    background: #ecf0f1; /* Fondo gris claro */
+}
+
+.matematica h2 {
+    color: #f39c12; /* Amarillo */
+    background: #ecf0f1; /* Fondo gris claro */
+}
+
+.ingles h2 {
+    color: #9b59b6; /* Morado */
+    background: #ecf0f1; /* Fondo gris claro */
+}
+
+.educacion_cultura_artistica h2 {
+    color: #e67e22; /* Naranja */
+    background: #ecf0f1; /* Fondo gris claro */
+}

@@ -1,0 +1,49 @@
+{% load static %}
+<!-- educacion_cultura_artistica.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Educación, Cultura y Artística</title>
+    <link rel="stylesheet" href="{% static '/materia.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'Cursos' %}"></a>
+    <div class="contenedor">
+        <h1>Educación, Cultura y Artística</h1>
+
+        <section class="seccion">
+            <h2>Fecha de Exámenes</h2>
+            <p>Próximo examen: 22 de marzo de 2024</p>
+        </section>
+
+        <section class="seccion">
+            <!-- Modificado: Agregado enlace a la sección de calificaciones -->
+            <h2><a href="{% url 'calificaciones' %}">Calificaciones</a></h2>
+            <!-- Fin de modificación -->
+            <p>Calificación última evaluación: 88</p>
+        </section>
+
+        <section class="seccion">
+        <h2><a href="{% url 'actividades' %}">Actividades</a></h2>
+            <ul>
+                <li>Proyecto de arte visual</li>
+                <li>Representación teatral</li>
+                <li>Ensayo sobre historia del arte</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Cronograma</h2>
+            <p>Próxima actividad: Concierto de música clásica</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Calendario</h2>
+            <p>Revisar el calendario para eventos importantes de Educación, Cultura y Artística.</p>
+        </section>
+    </div>
+</body>
+
+</html>

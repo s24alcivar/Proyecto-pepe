@@ -1,0 +1,44 @@
+/* estilos_materia.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.seccion {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Estilos específicos para Estudios Sociales */
+.contenedor h1 {
+    color: #3498db;
+}
+
+.seccion h2 {
+    color: #3498db;
+}
+
+.seccion p {
+    color: #555;
+}
+
+.seccion ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seccion li {
+    margin-bottom: 5px;
+}
+
+/* Puedes agregar más estilos según tus preferencias */

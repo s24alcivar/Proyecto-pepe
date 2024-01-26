@@ -1,0 +1,49 @@
+{% load static %}
+<!-- matematicas.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matemáticas</title>
+    <link rel="stylesheet" href="{% static '/materia.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'Cursos' %}"></a>
+    <div class="contenedor">
+        <h1>Matemáticas</h1>
+
+        <section class="seccion">
+            <h2>Fecha de Exámenes</h2>
+            <p>Próximo examen: 15 de marzo de 2024</p>
+        </section>
+
+        <section class="seccion">
+            <!-- Modificado: Agregado enlace a la sección de calificaciones -->
+            <h2><a href="{% url 'calificaciones' %}">Calificaciones</a></h2>
+            <!-- Fin de modificación -->
+            <p>Calificación última evaluación: 92</p>
+        </section>
+
+        <section class="seccion">
+        <h2><a href="{% url 'actividades' %}">Actividades</a></h2>  
+            <ul>
+                <li>Resolución de problemas</li>
+                <li>Práctica de ecuaciones</li>
+                <li>Proyecto geométrico</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Cronograma</h2>
+            <p>Próxima actividad: Repaso de álgebra lineal</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Calendario</h2>
+            <p>Revisar el calendario para eventos importantes de Matemáticas.</p>
+        </section>
+    </div>
+</body>
+
+</html>

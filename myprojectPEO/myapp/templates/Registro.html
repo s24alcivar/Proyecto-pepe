@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static '/estilos.css' %}">
+</head>
+
+<body>
+    <div class="contenedor">
+        <form class="form-register" method="post">
+            {% csrf_token %}
+            <h1>Regístrate</h1>
+            <input class="controls" type="text" name="nombre" required placeholder="Ingrese su Nombre"><br>
+            <input class="controls" type="text" name="apellido" required placeholder="Ingrese su Apellido"><br>
+            <input class="controls" type="text" name="cedula" required placeholder="Ingrese su Cédula"><br>
+            <input class="controls" type="text" name="correoelectronico" required placeholder="Ingrese su Correo Electrónico"><br>
+            <input class="controls" type="password" name="contraseña" required placeholder="Ingrese una Contraseña"><br>
+
+            <!-- Campo para seleccionar cargo (docente o estudiante) -->
+            <label for="cargo">Cargo:</label>
+            <select name="cargo" required>
+                <option value="docente">Docente</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
+
+            <input type="checkbox" id="acepto-terminos-y-condiciones" required>
+            <label for="acepto-terminos-y-condiciones">Acepto los términos y condiciones</label>
+            <input class="botons" type="submit" value="Registrarse">
+            <p>Ya tengo una cuenta <a href="{% url 'Login' %}"><strong><u>Iniciar Sesión</u></strong></a></p>
+        </form>
+    </div>
+</body>
+
+</html>

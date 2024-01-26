@@ -1,0 +1,75 @@
+{% load static %}
+<!-- pagina_docente.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plataforma Educativa Online - Docente</title>
+    <link rel="stylesheet" href="{%static '/docentes.css' %}">
+</head>
+<body>
+    <h1>Bienvenido, Docente</h1>
+
+    <h2>Cursos Disponibles</h2>
+    <ul>
+        <li><a href="{% url 'EstudiosSociales' %}">Estudios Sociales</a></li>
+        <li><a href="{% url 'CienciasNaturales' %}">Ciencias Naturales</a></li>
+        <li><a href="{% url 'LenguayLiteratura' %}">Lengua y Literatura</a></li>
+        <li><a href="{% url 'Matematica' %}">Matemática</a></li>
+        <li><a href="{% url 'Ingles' %}">Inglés</a></li>
+        <li><a href="{% url 'Eca' %}">Educación Cultura y Artística</a></li>
+    </ul>
+
+    <h2>Registro de Calificaciones</h2>
+    <!-- Formulario para registrar calificaciones -->
+    <form method="post" action="{% url 'calificaciones' %}">
+        <!-- Campos para seleccionar curso, estudiante, actividad, y agregar calificación -->
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="estudios_sociales">Estudios Sociales</option>
+            <option value="ciencias_naturales">Ciencias Naturales</option>
+            <option value="lengua_literatura">Lengua y Literatura</option>
+            <option value="ingles">Ingles</option>
+            <option value="educacion_cultura_artistica">Educación Cultura y Artística</option>
+            <option value="matematicas">Matematicas</option>
+            <!-- Añade más opciones para otros cursos -->
+        </select>
+
+        <label for="estudiante">Estudiante:</label>
+        <input type="text" name="estudiante" required>
+
+        <label for="actividad">Actividad:</label>
+        <input type="text" name="actividad" required>
+
+        <label for="calificacion">Calificación:</label>
+        <input type="text" name="calificacion" required>
+
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Registrar Calificación">
+    </form>
+
+    <h2>Registro de Actividades</h2>
+    <!-- Formulario para registrar actividades -->
+    <form method="post" action="{% url 'actividades' %}">
+        <!-- Campos para seleccionar curso, actividad y agregar detalles -->
+        <label for="curso_actividad">Curso:</label>
+        <select name="curso_actividad" id="curso_actividad">
+            <option value="estudios_sociales">Estudios Sociales</option>
+            <option value="ciencias_naturales">Ciencias Naturales</option>
+            <option value="lengua_literatura">Lengua y Literatura</option>
+            <option value="ingles">Ingles</option>
+            <option value="educacion_cultura_y_artistica">Ecucacion Cultura y Artistica</option>
+            <option value="matematicas">Matematicas</option>
+            <!-- Añade más opciones para otros cursos -->
+        </select>
+
+        <label for="actividad">Actividad:</label>
+        <input type="text" name="actividad" required>
+
+        <label for="detalles">Detalles:</label>
+        <textarea name="detalles" required></textarea>
+
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Registrar Actividad">
+    </form>
+</body>
+</html>

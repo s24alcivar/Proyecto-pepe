@@ -1,0 +1,56 @@
+{% load static %}
+<!-- cursos.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cursos</title>
+    <link rel="stylesheet" href="{% static '/curso.css' %}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h1>Cursos Disponibles</h1>
+
+        <div class="cursos-container">
+            <div class="curso estudios_sociales">
+                <h2>Estudios Sociales</h2>
+                <p>Descripción del curso de Estudios Sociales...</p>
+                <a href="{% url 'EstudiosSociales' %}">Detalles del curso</a>
+            </div>
+
+            <div class="curso ciencias_naturales">
+                <h2>Ciencias Naturales</h2>
+                <p>Descripción del curso de Ciencias Naturales...</p>
+                <a href="{% url 'CienciasNaturales' %}">Detalles del curso</a>
+            </div>
+
+            <div class="curso lengua_literatura">
+                <h2>Lengua y Literatura</h2>
+                <p>Descripción del curso de Lengua y Literatura...</p>
+                <a href="{% url 'LenguayLiteratura' %}">Detalles del curso</a>
+            </div>
+
+            <div class="curso matematica">
+                <h2>Matemática</h2>
+                <p>Descripción del curso de Matemática...</p>
+                <a href="{% url 'Matematica' %}">Detalles del curso</a>
+            </div>
+
+            <div class="curso ingles">
+                <h2>Inglés</h2>
+                <p>Descripción del curso de Inglés...</p>
+                <a href="{% url 'Ingles' %}">Detalles del curso</a>
+            </div>
+
+            <div class="curso educacion_cultura_artistica">
+                <h2>Educación, Cultura y Artística</h2>
+                <p>Descripción del curso de Educación, Cultura y Artística...</p>
+                <a href="{% url 'Eca' %}">Detalles del curso</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

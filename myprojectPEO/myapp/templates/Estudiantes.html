@@ -1,0 +1,17 @@
+{% load static %}
+<!-- pagina_estudiante.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plataforma Educativa Online - Estudiante</title>
+    <link rel="stylesheet" href="{%static '/docentes.css' %}">
+    <link rel="stylesheet" href="{%static '/estudiantes.css' %}">
+</head>
+<body>
+    <h1>Bienvenido, Estudiante</h1>
+    <h2><a href="{% url 'Cursos' %}">Cursos</a></h2>
+
+    <li><a href="{% url 'calificaciones' %}">Calificaciones</a></li>
+    <!-- Muestra las calificaciones del estudiante -->
+</body>
+</html>

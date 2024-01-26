@@ -1,0 +1,49 @@
+{% load static %}
+<!-- estudios_sociales.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estudios Sociales</title>
+    <link rel="stylesheet" href="{% static '/materia.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'Cursos' %}"></a>
+    <div class="contenedor">
+        <h1>Estudios Sociales</h1>
+
+        <section class="seccion">
+            <h2>Fecha de Exámenes</h2>
+            <p>Próximo examen: 10 de marzo de 2024</p>
+        </section>
+
+        <section class="seccion">
+            <!-- Modificado: Agregado enlace a la sección de calificaciones -->
+            <h2><a href="{% url 'calificaciones' %}">Calificaciones</a></h2>
+            <!-- Fin de modificación -->
+            <p>Calificación última evaluación: 85</p>
+        </section>
+        <h2><a href="{% url 'actividades' %}">Actividades</a></h2>
+        <section class="seccion">
+            
+            <ul>
+                <li>Actividad 1</li>
+                <li>Actividad 2</li>
+                <li>Actividad 3</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Cronograma</h2>
+            <p>Próxima actividad: Investigación sobre...</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Calendario</h2>
+            <p>Revisar el calendario para eventos importantes.</p>
+        </section>
+    </div>
+</body>
+
+</html>

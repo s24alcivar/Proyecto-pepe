@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+    <link rel="stylesheet" href="{%static '/calificaciones.css' %}">
+</head>
+
+<body>
+    <h1>Calificaciones</h1>
+
+    <!-- Mostrar calificaciones existentes -->
+    <h2>Calificaciones Actuales</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Estudiante</th>
+                <th>Materia</th>
+                <th>Actividad</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Comentario semitransparente -->
+            <tr>
+                <td colspan="4" class="no-calificaciones">Aún no se han registrado calificaciones.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulario para agregar nuevas calificaciones (Solo para el docente) -->
+    <h2>Registrar Nueva Calificación</h2>
+    <form action="{% url 'calificaciones' %}" method="post">
+        {% csrf_token %}
+        <label for="estudiante">Estudiante:</label>
+        <select name="estudiante" required>
+            <!-- Lista de estudiantes (puedes cargarla desde tu base de datos) -->
+            <option value="estudiante1">Estudiante1</option>
+            <option value="estudiante2">Estudiante2</option>
+            <!-- ... -->
+        </select>
+
+        <label for="materia">Materia:</label>
+        <select name="materia" required>
+            <!-- Lista de materias -->
+            <option value="matematicas">Matemáticas</option>
+            <option value="ingles">Inglés</option>
+            <option value="eca">ECA</option>
+            <option value="lengua_literatura">Lengua y Literatura</option>
+            <option value="estudios_sociales">Estudios Sociales</option>
+            <option value="ciencias_naturales">Ciencias Naturales</option>
+            <!-- ... -->
+        </select>
+
+        <label for="actividad">Actividad:</label>
+        <input type="text" name="actividad" required>
+
+        <label for="calificacion">Calificación:</label>
+        <input type="number" name="calificacion" step="0.1" required>
+
+        <input type="submit" value="Registrar Calificación">
+    </form>
+
+    <!-- Mostrar calificaciones a los estudiantes -->
+    <h2>Tus Calificaciones</h2>
+    <table border="1">
+        <!-- Comentario semitransparente -->
+        <tr>
+            <td colspan="3" class="no-calificaciones">Aún no se han registrado calificaciones.</td>
+        </tr>
+    </table>
+</body>
+
+</html>

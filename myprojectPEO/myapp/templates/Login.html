@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="{% static '/Styles.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts.css' %}">
+</head>
+
+<body>
+
+  <div class="contenedor">
+
+    <header>
+      <h1 class="title">Admin</h1>
+      <a href="{% url 'Registro' %}">Registrate</a>
+    </header>
+    <div class="login">
+      <article class="fondo">
+        <br> <br>
+        <h3>Inicio de Sesión</h3>
+        <form method="post" action="{% url 'Login' %}">
+          {% csrf_token %}
+          <span class="icon-user"></span><input class="inp" type="text" name="correoelectronico" placeholder="Correo Electrónico" required><br>
+          <span class="icon-key"></span><input class="inp" type="password" name="cedula" placeholder="Cédula" required><br>
+          <a href="" class="he">He olvidado mi contraseña</a>
+          <input class="boton" type="submit" value="Iniciar Sesión">
+        </form>
+        <br> <br>
+      </article>
+    </div>
+</body>
+
+</html>

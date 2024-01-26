@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/FondoProfesores.jpg'); /* Cambia la ruta de la imagen según tus preferencias */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1 {
+    color: #e74c3c; /* Color rojo */
+}
+
+h2 {
+    color: #f39c12; /* Color amarillo */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos fluyan en varias líneas */
+}
+
+li {
+    margin-bottom: 10px;
+    width: calc(33.33% - 20px); /* Ajusta el ancho del cuadro según el número de columnas deseadas */
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3498db; /* Color azul */
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el ratón sobre el enlace */
+}
+
+h2 + ul {
+    margin-top: 20px;
+}
